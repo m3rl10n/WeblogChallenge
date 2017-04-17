@@ -16,6 +16,14 @@
 //
 // The sessionization is performed via the default proposed 15 minute window. 
 // 
+// Optimal bin window analysis notes:
+// An approach to identify the optimal window could look at the distribution 
+// of intra-visit durations and choosing a thresolhold T such that X% of 
+// clicks happen within T seconds. For simplicity, if we assume that for any T
+// the number of sessions of a single click are neglible this is ok. To be more
+// thorough it would be important to run through potential values for T,
+// sessionize, and determine if the number of single click sessions  provides 
+// appropriate X%.
 
 // ------------- PART 1 : SESSIONIZE WITH ASSUMED 15 MINUTE WINDOW -----------------
 //
